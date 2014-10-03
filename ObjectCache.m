@@ -70,7 +70,8 @@
   if (obj == nil){
     //Find this object for the first time...
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%@ == %@", self.fieldName, stringKey];
+    NSString *format = [NSString stringWithFormat:@"%@ == %%@",self.fieldName];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:format, stringKey];    
     [fetchRequest setPredicate:predicate];
     NSEntityDescription *entity = [NSEntityDescription entityForName:clazz inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
