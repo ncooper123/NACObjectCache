@@ -1,14 +1,12 @@
 //
-//  ObjectCache.m
-//  LA Creel
+//  NACObjectCache.m
 //
 //  Created by Nathan Cooper on 2013-11-12.
-//  Copyright (c) 2013 LDWF. All rights reserved.
 //
 
-#import "ObjectCache.h"
+#import "NACObjectCache.h"
 
-@interface ObjectCache()
+@interface NACObjectCache()
 
 @property (strong,nonatomic) NSMutableDictionary *cache;
 @property (strong,nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -16,7 +14,7 @@
 
 @end
 
-@implementation ObjectCache
+@implementation NACObjectCache
 
 @synthesize cache = _cache;
 
